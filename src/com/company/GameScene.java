@@ -12,7 +12,7 @@ public class GameScene extends JPanel implements ActionListener{
     boolean flag;
 
     GameScene(int height, int width) {
-setBord();
+
         this.setBounds(0, 0, width, height);
         this.setLayout(new GridLayout(8, 8));
 
@@ -46,8 +46,7 @@ setBord();
     public void actionPerformed(ActionEvent e) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if(tools[i][j]!=null)
-                  Squares[i][j].setIcon(new ImageIcon(tools[i][j].type));
+                Squares[i][j].setIcon(new ImageIcon(tools[i][j].type));
             }
         }
         for (int i = 0; i < 8; i++) {
@@ -56,35 +55,6 @@ setBord();
                     System.out.println(i + " " + j);
                 }
             }
-        }
-    }
-
-    public void setBord() {
-
-        tools[0][0] = new Castle(0, 0, Color.BLACK);
-        tools[0][1] = new Horse(1, 0, Color.BLACK);
-        tools[0][2] = new Bishop(2, 0, Color.BLACK);
-        tools[0][3] = new Queen(3, 0, Color.BLACK);
-        tools[0][4] = new King(4, 0, Color.BLACK);
-        tools[0][5] = new Bishop(5, 0, Color.BLACK);
-        tools[0][6] = new Horse(6, 0, Color.BLACK);
-        tools[0][7] = new Castle(7, 0, Color.BLACK);
-
-        for (int i = 0; i < 8; i++) {
-            tools[1][i] = new Pown(i, 1, Color.BLACK);
-        }
-
-        tools[7][0] = new Castle(0, 7, Color.WHITE);
-        tools[7][1] = new Horse(1, 7, Color.WHITE);
-        tools[7][2] = new Bishop(2, 7, Color.WHITE);
-        tools[7][3] = new Queen(3, 7, Color.WHITE);
-        tools[7][4] = new King(4, 7, Color.WHITE);
-        tools[7][5] = new Bishop(5, 7, Color.WHITE);
-        tools[7][6] = new Horse(6, 7, Color.WHITE);
-        tools[7][7] = new Castle(7, 7, Color.WHITE);
-
-        for (int i = 0; i < 8; i++) {
-            tools[6][i] = new Pown(i, 6, Color.WHITE);
         }
     }
 }
