@@ -15,9 +15,5 @@ public class Horse extends Tool{
         else
             return false;
     }
-    public void Move(int x,int y)
-    {
-        this.inxX = x;
-        this.inxY = y;
-    }
+
 }

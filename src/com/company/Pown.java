@@ -37,9 +37,5 @@ public class Pown extends Tool{
         }
         return false;
     }
-    public void Move(int x,int y)
-    {
-        this.inxX = x;
-        this.inxY = y;
-    }
+
 }
