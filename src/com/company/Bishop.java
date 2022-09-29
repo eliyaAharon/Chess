@@ -45,4 +45,9 @@ public class Bishop extends Tool{
         }
         return  true;
     }
+    public void Move(int toX,int toY)
+    {
+        this.inxY = toX;
+        this.inxX = toX;
+    }
 }
