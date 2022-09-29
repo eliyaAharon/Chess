@@ -33,10 +33,10 @@ public class GameScene extends JPanel implements ActionListener{
 
                 if (!flag) {
                     Squares[i][j].setBackground(new Color(200, 100, 10));
-                    flag = true;
+                    if(j != 7)flag = true;
                 } else {
                     Squares[i][j].setBackground(new Color(100, 50, 10));
-                    flag = false;
+                    if(j != 7)flag = false;
                 }
             }
         }
