@@ -28,7 +28,9 @@ public class GameScene extends JPanel implements ActionListener{
                 Squares[i][j].addActionListener(this);
                 Squares[i][j].setFocusable(false);
                 Squares[i][j].setVisible(true);
+
                 this.add(Squares[i][j]);
+
                 if (!flag) {
                     Squares[i][j].setBackground(new Color(200, 100, 10));
                     flag = true;

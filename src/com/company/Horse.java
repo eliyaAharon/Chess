@@ -6,6 +6,7 @@ public class Horse extends Tool{
 
     public Horse(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);
+        this.type = "Horse";
     }
     public boolean ableToMove(int x,int y)
     {
