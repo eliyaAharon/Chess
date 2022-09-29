@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Pown extends Tool{
 
-    Tool[][] tools = new Tool[8][8];
+    Tool[][]tools = GameScene.tools;
 
     public Pown(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);

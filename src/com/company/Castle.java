@@ -10,18 +10,18 @@ public class Castle extends Tool {
         this.type = "Castle";
     }
 
-    public boolean ableToMove(int toX , int toY) {
+    public boolean ableToMove(int X , int Y) {
         Tool[][]tools = GameScene.tools;
 
-        if (!(toX == this.inxX && toY != this.inxY) || (toY == this.inxY && toX != this.inxX))
+        if (!(X == this.inxX && Y != this.inxY) || (Y == this.inxY && X != this.inxX))
             return false;
-        for (int x = this.inxX; x < toX ; x++)
+        for (int x = Math.min(this.inxX, X)+1; x <Math.max(this.inxX, X) ; x++)
         {
             if(tools[x][this.inxY]!= null)
                 return false;
         }
 
-        for (int y = this.inxY; y < toY; y++)
+        for (int y = Math.min(this.inxY,Y)+1; y < Math.max(this.inxY,Y); y++)
         {
             if(tools[this.inxX][y]!= null)
                 return false;
