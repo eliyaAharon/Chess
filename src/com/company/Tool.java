@@ -5,6 +5,7 @@ import java.awt.*;
 public class Tool {
     protected int inxX,inxY;
     protected Color color;
+    protected boolean IsMove = false;
     protected String type;
     public Tool(int inxX, int inxY, Color color) {
         this.inxX = inxX;
@@ -21,11 +22,13 @@ public class Tool {
     {
         this.inxY = toX;
         this.inxX = toX;
+        this.IsMove = true;
     }
 
     public int getInxX() {
         return inxX;
     }
+    public boolean getIsMove(){return IsMove;}
 
     public void setInxX(int inxX) {
         this.inxX = inxX;
@@ -47,3 +50,4 @@ public class Tool {
         this.color = color;
     }
 }
+
