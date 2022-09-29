@@ -33,6 +33,10 @@ public class Castle extends Tool {
         }
         return true;
     }
+    public void move(int toX,int toY) {
+        this.inxY = toX;
+        this.inxX = toX;
+    }
 
 
 }

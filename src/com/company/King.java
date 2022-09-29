@@ -25,4 +25,9 @@ public class King extends Tool{
         }
         return false;
     }
+    public void move(int toX,int toY)
+    {
+        this.inxY = toX;
+        this.inxX = toX;
+    }
 }
