@@ -23,6 +23,7 @@ public class Main extends JFrame {
         GameScene gameScene = new GameScene(800, 800);
         this.add(gameScene) ;
 
+        this.setVisible(true);
 
     }
 }
