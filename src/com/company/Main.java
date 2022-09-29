@@ -20,6 +20,8 @@ public class Main extends JFrame {
         this.setBackground(Color.BLACK);
         this.setVisible(true);
 
+        GameScene gameScene = new GameScene(800, 800);
+        this.add(gameScene) ;
 
 
     }
