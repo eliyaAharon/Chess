@@ -12,7 +12,16 @@ public class Tool {
         this.color = color;
     }
 
+    public boolean ableToMove(int toX,int toY)
+    {
+        return true;
+    }
 
+    public void move(int toX,int toY)
+    {
+        this.inxY = toX;
+        this.inxX = toX;
+    }
 
     public int getInxX() {
         return inxX;
