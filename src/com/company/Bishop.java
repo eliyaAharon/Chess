@@ -12,7 +12,7 @@ public class Bishop extends Tool{
         super(inxX, inxY, color);
         this.type= "Bishop";
     }
-    public boolean AvailableToMove (int Tox, int Toy)
+    public boolean ableToMove(int Tox, int Toy)
     {
         double shipua;
         Tool[][]tools = GameScene.tools;
