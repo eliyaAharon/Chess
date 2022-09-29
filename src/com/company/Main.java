@@ -1,8 +1,23 @@
 package com.company;
 
-public class Main {
+import javax.swing.*;
+import java.awt.*;
+
+public class Main extends JFrame {
 
     public static void main(String[] args) {
-	// write your code here
+        Main window = new Main();
+    }
+
+    public Main() {
+        this.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
+        this.setTitle("Chess");
+        this.setSize(800, 800);
+        this.setLocationRelativeTo(null);
+        this.setBackground(Color.BLACK);
+        this.setVisible(true);
+
     }
 }
