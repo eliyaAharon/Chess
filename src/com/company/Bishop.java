@@ -10,7 +10,11 @@ public class Bishop extends Tool{
 
     public Bishop(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);
-        this.type= "Bishop";
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_Bishop.png";
+        }else{
+            this.type = "Icons\\White_Bishop.png";
+        }
     }
     public boolean ableToMove(int Tox, int Toy)
     {
