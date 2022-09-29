@@ -5,9 +5,14 @@ import java.awt.*;
 
 public class Castle extends Tool {
 
-    public Castle(int inxX, int inxY, Color color) {
+    public Castle(int inxX, int inxY, Color color ) {
         super(inxX, inxY, color);
-        this.type = "Castle";
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_Castle.png";
+        }else{
+            this.type = "Icons\\White_Castle.png";
+        }
+
     }
 
     public boolean ableToMove(int X , int Y) {

@@ -7,6 +7,11 @@ public class King extends Tool{
     public King(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);
         horse = new Horse(inxX,inxY,color);
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_King.png";
+        }else{
+            this.type = "Icons\\White_King.png";
+        }
     }
     public boolean Check(int x, int y){
         if (horse.ableToMove(x,y)){
