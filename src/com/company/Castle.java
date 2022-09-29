@@ -5,28 +5,37 @@ import java.awt.*;
 
 public class Castle extends Tool {
 
-    public Castle(int inxX, int inxY, Color color) {
+    public Castle(int inxX, int inxY, Color color ) {
         super(inxX, inxY, color);
-        this.type = "Castle";
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_Castle.png";
+        }else{
+            this.type = "Icons\\White_Castle.png";
+        }
+
     }
 
-    public boolean ableToMove(int toX , int toY) {
+    public boolean ableToMove(int X , int Y) {
         Tool[][]tools = GameScene.tools;
 
-        if (!(toX == this.inxX && toY != this.inxY) || (toY == this.inxY && toX != this.inxX))
+        if (!(X == this.inxX && Y != this.inxY) || (Y == this.inxY && X != this.inxX))
             return false;
-        for (int x = this.inxX; x < toX ; x++)
+        for (int x = Math.min(this.inxX, X)+1; x <Math.max(this.inxX, X) ; x++)
         {
             if(tools[x][this.inxY]!= null)
                 return false;
         }
 
-        for (int y = this.inxY; y < toY; y++)
+        for (int y = Math.min(this.inxY,Y)+1; y < Math.max(this.inxY,Y); y++)
         {
             if(tools[this.inxX][y]!= null)
                 return false;
         }
         return true;
+    }
+    public void move(int toX,int toY) {
+        this.inxY = toX;
+        this.inxX = toX;
     }
 
 

@@ -7,7 +7,11 @@ public class Queen extends Tool{
     private Castle castle;
     public Queen(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);
-        this.type = "Queen";
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_Queen.png";
+        }else{
+            this.type = "Icons\\White_Queen.png";
+        }
         bishop = new Bishop(inxX,inxY,color);
         castle = new Castle(inxX,inxY,color);
 

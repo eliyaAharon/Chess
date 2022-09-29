@@ -9,8 +9,6 @@ public class GameScene extends JPanel implements ActionListener{
 
     JButton[][] Squares = new JButton[8][8];
     public static Tool[][] tools = new Tool[8][8];
-
-
     boolean flag;
 
     GameScene(int height, int width) {
@@ -46,6 +44,11 @@ public class GameScene extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                Squares[i][j].setIcon(new ImageIcon(tools[i][j].type));
+            }
+        }
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if(e.getSource() == Squares[i][j]){

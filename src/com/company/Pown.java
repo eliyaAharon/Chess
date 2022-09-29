@@ -4,11 +4,15 @@ import java.awt.*;
 
 public class Pown extends Tool{
 
-    Tool[][] tools = new Tool[8][8];
+    Tool[][]tools = GameScene.tools;
 
     public Pown(int inxX, int inxY, Color color) {
         super(inxX, inxY, color);
-        this.type = "Pown";
+        if(color==Color.BLACK){
+            this.type = "Icons\\Black_Pown.png";
+        }else{
+            this.type = "Icons\\White_Pown.png";
+        }
     }
     public boolean ableToMove(int x,int y)
     {
