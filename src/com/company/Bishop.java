@@ -1,3 +1,5 @@
+package com.company;
+
 import com.company.GameScene;
 import com.company.Tool;
 
@@ -42,5 +44,10 @@ public class Bishop extends Tool{
                 return false;
         }
         return  true;
+    }
+    public void Move(int toX,int toY)
+    {
+        this.inxY = toX;
+        this.inxX = toX;
     }
 }
