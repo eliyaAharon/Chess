@@ -2,12 +2,11 @@ package com.company;
 
 import javax.swing.*;
 
-public class GameScene extends JFrame {
+public class GameScene extends JPanel {
 
-    JPanel panel = new JPanel();
-    JLabel[][] Squares = new JLabel[8][8];
+    JButton[][] Squares = new JButton[8][8];
 
-    GameScene(){
+    GameScene(int height , int width){
 
     }
 }
