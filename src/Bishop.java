@@ -10,17 +10,17 @@ public class Bishop extends Tool{
         super(inxX, inxY, color);
         this.type= "Bishop";
     }
-    public boolean AvailableToMove (int Tox, int Toy)
+    public boolean AvailableToMove (int x, int y)
     {
         double shipua;
         Tool[][]tools = GameScene.tools;
 
-        shipua = (Tox-this.inxX)/(Toy-this.inxY);
+        shipua = (x-this.inxX)/(y-this.inxY);
         if(shipua==1.0)
         {
-           for(int i=1; i<(Math.abs(Tox-this.inxX));i++)
+           for(int i=1; i<(Math.abs(x-this.inxX));i++)
            {
-              if(tools[Math.min(Tox,this.inxX)+i][Math.min(this.inxY,Toy)-i]!=null)
+              if(tools[Math.min(x,this.inxX)+i][Math.min(this.inxY,y)-i]!=null)
               {
                   return false;
               }
@@ -29,9 +29,9 @@ public class Bishop extends Tool{
         else {
             if(shipua == -1.0)
             {
-                for(int i=1; i<(Math.abs(Tox-this.inxX));i++)
+                for(int i=1; i<(Math.abs(x-this.inxX));i++)
                 {
-                    if(tools[Math.min(Tox,this.inxX)+i][Math.max(this.inxY,Toy)+i]!=null)
+                    if(tools[Math.min(x,this.inxX)+i][Math.max(this.inxY,y)+i]!=null)
                     {
                         return false;
                     }
